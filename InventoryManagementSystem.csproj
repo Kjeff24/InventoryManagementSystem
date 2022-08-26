@@ -44,111 +44,118 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryForm.cs">
+    <Compile Include="CategoryPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CategoryForm.Designer.cs">
-      <DependentUpon>CategoryForm.cs</DependentUpon>
+    <Compile Include="CategoryPage.Designer.cs">
+      <DependentUpon>CategoryPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="CategoryModuleForm.cs">
+    <Compile Include="CategoryModulePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CategoryModuleForm.Designer.cs">
-      <DependentUpon>CategoryModuleForm.cs</DependentUpon>
+    <Compile Include="CategoryModulePage.Designer.cs">
+      <DependentUpon>CategoryModulePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerForm.cs">
+    <Compile Include="CustomerPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerForm.Designer.cs">
-      <DependentUpon>CustomerForm.cs</DependentUpon>
+    <Compile Include="CustomerPage.Designer.cs">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerModuleForm.cs">
+    <Compile Include="CustomerModulePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerModuleForm.Designer.cs">
-      <DependentUpon>CustomerModuleForm.cs</DependentUpon>
+    <Compile Include="CustomerModulePage.Designer.cs">
+      <DependentUpon>CustomerModulePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderForm.cs">
+    <Compile Include="OrderPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderForm.Designer.cs">
-      <DependentUpon>OrderForm.cs</DependentUpon>
+    <Compile Include="OrderPage.Designer.cs">
+      <DependentUpon>OrderPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderModuleForm.cs">
+    <Compile Include="OrderModulePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderModuleForm.Designer.cs">
-      <DependentUpon>OrderModuleForm.cs</DependentUpon>
+    <Compile Include="OrderModulePage.Designer.cs">
+      <DependentUpon>OrderModulePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductForm.cs">
+    <Compile Include="ProductPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductForm.Designer.cs">
-      <DependentUpon>ProductForm.cs</DependentUpon>
+    <Compile Include="ProductPage.Designer.cs">
+      <DependentUpon>ProductPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductModuleForm.cs">
+    <Compile Include="ProductModulePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductModuleForm.Designer.cs">
-      <DependentUpon>ProductModuleForm.cs</DependentUpon>
+    <Compile Include="ProductModulePage.Designer.cs">
+      <DependentUpon>ProductModulePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserForm.cs">
+    <Compile Include="UserPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForm.Designer.cs">
-      <DependentUpon>UserForm.cs</DependentUpon>
+    <Compile Include="UserPage.Designer.cs">
+      <DependentUpon>UserPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserModuleForm.cs">
+    <Compile Include="UserModulePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserModuleForm.Designer.cs">
-      <DependentUpon>UserModuleForm.cs</DependentUpon>
+    <Compile Include="UserModulePage.Designer.cs">
+      <DependentUpon>UserModulePage.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CategoryForm.resx">
-      <DependentUpon>CategoryForm.cs</DependentUpon>
+    <Compile Include="WelcomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomePage.Designer.cs">
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CategoryPage.resx">
+      <DependentUpon>CategoryPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CategoryModuleForm.resx">
-      <DependentUpon>CategoryModuleForm.cs</DependentUpon>
+    <EmbeddedResource Include="CategoryModulePage.resx">
+      <DependentUpon>CategoryModulePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerForm.resx">
-      <DependentUpon>CustomerForm.cs</DependentUpon>
+    <EmbeddedResource Include="CustomerPage.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerModuleForm.resx">
-      <DependentUpon>CustomerModuleForm.cs</DependentUpon>
+    <EmbeddedResource Include="CustomerModulePage.resx">
+      <DependentUpon>CustomerModulePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderForm.resx">
-      <DependentUpon>OrderForm.cs</DependentUpon>
+    <EmbeddedResource Include="OrderPage.resx">
+      <DependentUpon>OrderPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderModuleForm.resx">
-      <DependentUpon>OrderModuleForm.cs</DependentUpon>
+    <EmbeddedResource Include="OrderModulePage.resx">
+      <DependentUpon>OrderModulePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductForm.resx">
-      <DependentUpon>ProductForm.cs</DependentUpon>
+    <EmbeddedResource Include="ProductPage.resx">
+      <DependentUpon>ProductPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductModuleForm.resx">
-      <DependentUpon>ProductModuleForm.cs</DependentUpon>
+    <EmbeddedResource Include="ProductModulePage.resx">
+      <DependentUpon>ProductModulePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -160,11 +167,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserForm.resx">
-      <DependentUpon>UserForm.cs</DependentUpon>
+    <EmbeddedResource Include="UserPage.resx">
+      <DependentUpon>UserPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserModuleForm.resx">
-      <DependentUpon>UserModuleForm.cs</DependentUpon>
+    <EmbeddedResource Include="UserModulePage.resx">
+      <DependentUpon>UserModulePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomePage.resx">
+      <DependentUpon>WelcomePage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -217,6 +227,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\add_create_new_plus_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\6541.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\19199574.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

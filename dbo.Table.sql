@@ -1,9 +1,13 @@
-﻿CREATE TABLE [dbo].[tbUser]
+﻿CREATE TABLE [dbo].[tbOrder]
 (
-	[username] VARCHAR(50) NOT NULL , 
-    [fullname] VARCHAR(50) NULL, 
-    [email] VARCHAR(50) NOT NULL, 
-    [phone] VARCHAR(50) NOT NULL, 
-    [password] VARCHAR(50) NULL, 
-    PRIMARY KEY ([phone])
+	[orderid] INT NOT NULL IDENTITY , 
+    [orderdate] INT NOT NULL, 
+    [pid] INT NOT NULL, 
+    [pname] VARCHAR(50) NOT NULL, 
+    [cid] INT NOT NULL, 
+    [cname] VARCHAR(50) NOT NULL, 
+    [quantity] INT NOT NULL, 
+    [price] INT NOT NULL, 
+    [total] INT NOT NULL, 
+    PRIMARY KEY ([orderid])
 )
