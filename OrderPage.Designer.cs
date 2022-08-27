@@ -341,7 +341,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnadd;
         private System.Windows.Forms.TextBox txtsearch;
-        private System.Windows.Forms.DataGridViewImageColumn Edit;
+        //private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;

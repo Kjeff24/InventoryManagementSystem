@@ -26,13 +26,13 @@ namespace InventoryManagementSystem
         {
             int j = 0;
             dgvProduct.Rows.Clear();
-            sqlcommand = new SqlCommand("SELECT * FROM tbProduct WHERE CONCAT(pid, pname,pprice,pdescription,pcategory) LIKE '%" + txtsearch.Text + "%' ", sqlcon);
+            sqlcommand = new SqlCommand("SELECT * FROM tbProduct WHERE CONCAT(pid, pname,pprice,pdescription,pcategory, pbarcode) LIKE '%" + txtsearch.Text + "%' ", sqlcon);
             sqlcon.Open();
             sqldr = sqlcommand.ExecuteReader();
             while (sqldr.Read())
             {
                 j++;
-                dgvProduct.Rows.Add(j, sqldr[0].ToString(), sqldr[1].ToString(), sqldr[2].ToString(), sqldr[3].ToString(), sqldr[4].ToString(), sqldr[5].ToString());
+                dgvProduct.Rows.Add(j, sqldr[0].ToString(), sqldr[1].ToString(), sqldr[2].ToString(), sqldr[3].ToString(), sqldr[4].ToString(), sqldr[5].ToString(), sqldr[6].ToString());
             }
             sqldr.Close();
             sqlcon.Close();
@@ -60,6 +60,7 @@ namespace InventoryManagementSystem
                 productModule.txtprodPrice.Text = dgvProduct.Rows[e.RowIndex].Cells[4].Value.ToString();
                 productModule.txtprodDes.Text = dgvProduct.Rows[e.RowIndex].Cells[5].Value.ToString();
                 productModule.comboQty.Text = dgvProduct.Rows[e.RowIndex].Cells[6].Value.ToString();
+                productModule.txtbarcode.Text = dgvProduct.Rows[e.RowIndex].Cells[7].Value.ToString();
 
                 productModule.btnsave.Enabled = false;
                 productModule.btnupd.Enabled = true;

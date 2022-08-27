@@ -50,6 +50,7 @@ namespace InventoryManagementSystem
             txtprodPrice.Clear();
             txtprodDes.Clear();
             comboQty.Text = "";
+            txtbarcode.Clear();
 
         }
 
@@ -68,12 +69,13 @@ namespace InventoryManagementSystem
                 if (MessageBox.Show("Do You " +
                 "Want To Save This Product", "Saving Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    sqlcommand = new SqlCommand("INSERT INTO tbProduct(pname,pqty,pprice,pdescription,pcategory)VALUES(@pname,@pqty,@pprice,@pdescription,@pcategory)", sqlcon);
+                    sqlcommand = new SqlCommand("INSERT INTO tbProduct(pname,pqty,pprice,pdescription,pcategory, pbarcode)VALUES(@pname,@pqty,@pprice,@pdescription,@pcategory, @pbarcode)", sqlcon);
                     sqlcommand.Parameters.AddWithValue("@pname", txtprodName.Text);
                     sqlcommand.Parameters.AddWithValue("@pqty", Convert.ToInt16(txtprodQuan.Text));
                     sqlcommand.Parameters.AddWithValue("@pprice", Convert.ToInt16(txtprodPrice.Text));
                     sqlcommand.Parameters.AddWithValue("@pdescription", txtprodDes.Text);
                     sqlcommand.Parameters.AddWithValue("@pcategory", comboQty.Text);
+                    sqlcommand.Parameters.AddWithValue("@pbarcode", Convert.ToInt64(txtbarcode.Text));
                     sqlcon.Open();
                     sqlcommand.ExecuteNonQuery();
                     sqlcon.Close();
@@ -94,12 +96,13 @@ namespace InventoryManagementSystem
                 if (MessageBox.Show("Do You " +
                 "Want To Update This Product", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    sqlcommand = new SqlCommand("UPDATE tbProduct SET pname=@pname,pqty=@pqty,pprice=@pprice,pdescription=@pdescription,pcategory=@pcategory WHERE pid LIKE '" + lblpid.Text + "'", sqlcon);
+                    sqlcommand = new SqlCommand("UPDATE tbProduct SET pname=@pname,pqty=@pqty,pprice=@pprice,pdescription=@pdescription,pcategory=@pcategory, pbarcode=@pbarcode WHERE pid LIKE '" + lblpid.Text + "'", sqlcon);
                     sqlcommand.Parameters.AddWithValue("@pname", txtprodName.Text);
                     sqlcommand.Parameters.AddWithValue("@pqty", txtprodQuan.Text);
                     sqlcommand.Parameters.AddWithValue("@pprice", txtprodPrice.Text);
                     sqlcommand.Parameters.AddWithValue("@pdescription", txtprodDes.Text);
                     sqlcommand.Parameters.AddWithValue("@pcategory", comboQty.Text);
+                    sqlcommand.Parameters.AddWithValue("@pbarcode", txtbarcode.Text);
                     sqlcon.Open();
                     sqlcommand.ExecuteNonQuery();
                     sqlcon.Close();
@@ -107,6 +110,20 @@ namespace InventoryManagementSystem
                     ClearInput();
                     this.Dispose();
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void bntgenerate_Click(object sender, EventArgs e)
+        {
+            string barcode = txtbarcode.Text;
+            try
+            {
+                Zen.Barcode.Code128BarcodeDraw brCode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+                pboxbarcode.Image = brCode.Draw(barcode, 100);
             }
             catch (Exception ex)
             {

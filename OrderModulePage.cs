@@ -50,13 +50,13 @@ namespace InventoryManagementSystem
         {
             int j = 0;
             dgvProduct.Rows.Clear();
-            sqlcommand = new SqlCommand("SELECT * FROM tbProduct WHERE CONCAT(pid, pname, pprice,pdescription,pcategory) LIKE '%" + txtsearchprod.Text + "%' ", sqlcon);
+            sqlcommand = new SqlCommand("SELECT * FROM tbProduct WHERE CONCAT(pid, pname, pprice,pdescription,pcategory, pbarcode) LIKE '%" + txtsearchprod.Text + "%' ", sqlcon);
             sqlcon.Open();
             sqldr = sqlcommand.ExecuteReader();
             while (sqldr.Read())
             {
                 j++;
-                dgvProduct.Rows.Add(j, sqldr[0].ToString(), sqldr[1].ToString(), sqldr[2].ToString(), sqldr[3].ToString(), sqldr[4].ToString(), sqldr[5].ToString());
+                dgvProduct.Rows.Add(j, sqldr[0].ToString(), sqldr[1].ToString(), sqldr[2].ToString(), sqldr[3].ToString(), sqldr[4].ToString(), sqldr[5].ToString(), sqldr[6].ToString());
             }
             sqldr.Close();
             sqlcon.Close();
