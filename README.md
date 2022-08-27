@@ -11,7 +11,7 @@ All users can login, add products, add customers, add categories, and add orders
 
 FUNCTIONAL REQUIREMENTS
 =
-1. Welcome Page
+Welcome Page
 =
 ![welcomepage](https://user-images.githubusercontent.com/91270318/187031157-44554e3a-1637-49c0-a2cb-68e18b0648f0.jpg)
 
