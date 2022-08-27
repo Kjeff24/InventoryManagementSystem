@@ -19,6 +19,7 @@ namespace InventoryManagementSystem
         public LoginPage()
         {
             InitializeComponent();
+            logrolecombo.SelectedIndex = 0;
         }
 
         // Close button closes the application
@@ -49,17 +50,18 @@ namespace InventoryManagementSystem
                 sqlcon.Open();
                 sqldr = sqlcommand.ExecuteReader();
                 sqldr.Read();
-                if (sqldr.HasRows)
+                
+                if (sqldr.HasRows && sqldr[5].ToString() == logrolecombo.Text)
                 {
                     MessageBox.Show("Hello " + sqldr["fullname"].ToString(), "AUTHORIZED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MainPage main = new MainPage();
+                    MainPage main = new MainPage(logrolecombo.Text);
                     this.Hide();
-                    main.ShowDialog();  
+                    main.ShowDialog();     
                 }
                 else
                 {
-                    MessageBox.Show("Invalid username or password", "UNAUTHORIZED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    MainPage main = new MainPage();
+                    MessageBox.Show("Invalid username, password or wrong user role", "UNAUTHORIZED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                  
                 }
                 sqlcon.Close();
             }

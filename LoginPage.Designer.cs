@@ -41,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.checkpassword = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.logrolecombo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closebtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -96,7 +97,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(533, 200);
+            this.label1.Location = new System.Drawing.Point(533, 226);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 1;
@@ -104,7 +105,7 @@
             // 
             // textbUsername
             // 
-            this.textbUsername.Location = new System.Drawing.Point(537, 223);
+            this.textbUsername.Location = new System.Drawing.Point(537, 249);
             this.textbUsername.Name = "textbUsername";
             this.textbUsername.Size = new System.Drawing.Size(213, 20);
             this.textbUsername.TabIndex = 2;
@@ -175,12 +176,27 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
-            // LoginForm
+            // logrolecombo
+            // 
+            this.logrolecombo.DisplayMember = "Attendant";
+            this.logrolecombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.logrolecombo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logrolecombo.FormattingEnabled = true;
+            this.logrolecombo.Items.AddRange(new object[] {
+            "Admin",
+            "Attendant"});
+            this.logrolecombo.Location = new System.Drawing.Point(648, 196);
+            this.logrolecombo.Name = "logrolecombo";
+            this.logrolecombo.Size = new System.Drawing.Size(102, 25);
+            this.logrolecombo.TabIndex = 12;
+            // 
+            // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(808, 490);
+            this.Controls.Add(this.logrolecombo);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.checkpassword);
             this.Controls.Add(this.label4);
@@ -191,7 +207,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LoginForm";
+            this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -218,6 +234,7 @@
         private System.Windows.Forms.CheckBox checkpassword;
         private System.Windows.Forms.PictureBox closebtn;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.ComboBox logrolecombo;
     }
 }
 

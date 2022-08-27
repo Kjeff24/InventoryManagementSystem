@@ -26,13 +26,13 @@ namespace InventoryManagementSystem
         {
             int j = 0;
             dgvUser.Rows.Clear();
-            sqlcommand = new SqlCommand("SELECT * FROM tbUser WHERE CONCAT(username,fullname,email,phone) LIKE '%" + txtsearch.Text + "%'", sqlcon);
+            sqlcommand = new SqlCommand("SELECT * FROM tbUser WHERE CONCAT(username,fullname,email,phone, role) LIKE '%" + txtsearch.Text + "%'", sqlcon);
             sqlcon.Open();
             sqldr = sqlcommand.ExecuteReader();
             while (sqldr.Read())
             {
                 j++;
-                dgvUser.Rows.Add(j, sqldr[0].ToString(), sqldr[1].ToString(), sqldr[2].ToString(), sqldr[3].ToString(), sqldr[4].ToString());
+                dgvUser.Rows.Add(j, sqldr[0].ToString(), sqldr[1].ToString(), sqldr[2].ToString(), sqldr[3].ToString(), sqldr[4].ToString(), sqldr[5].ToString());
             }
             sqldr.Close();
             sqlcon.Close();
@@ -60,6 +60,7 @@ namespace InventoryManagementSystem
                 userModule.txtemail.Text = dgvUser.Rows[e.RowIndex].Cells[3].Value.ToString();
                 userModule.txtphone.Text = dgvUser.Rows[e.RowIndex].Cells[4].Value.ToString();
                 userModule.txtpass.Text = dgvUser.Rows[e.RowIndex].Cells[5].Value.ToString();
+                userModule.rolecombo.Text = dgvUser.Rows[e.RowIndex].Cells[6].Value.ToString();
 
                 userModule.btnsave.Enabled = false;
                 userModule.btnupd.Enabled=true;

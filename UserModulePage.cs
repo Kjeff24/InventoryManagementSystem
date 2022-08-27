@@ -37,12 +37,13 @@ namespace InventoryManagementSystem
                 if (MessageBox.Show("Do You " +
                 "Want To Save This User", "Saving Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    sqlcommand = new SqlCommand("INSERT INTO tbUser(username,fullname,email,phone,password)VALUES(@username,@fullname,@email,@phone,@password)", sqlcon);
+                    sqlcommand = new SqlCommand("INSERT INTO tbUser(username,fullname,email,phone,password, role)VALUES(@username,@fullname,@email,@phone,@password, @role)", sqlcon);
                     sqlcommand.Parameters.AddWithValue("@username", txtUser.Text);
                     sqlcommand.Parameters.AddWithValue("@fullname", txtfull.Text);
                     sqlcommand.Parameters.AddWithValue("@email", txtemail.Text);
                     sqlcommand.Parameters.AddWithValue("@phone", txtphone.Text);
                     sqlcommand.Parameters.AddWithValue("@password", txtpass.Text);
+                    sqlcommand.Parameters.AddWithValue("@role", rolecombo.Text);
                     sqlcon.Open();
                     sqlcommand.ExecuteNonQuery();
                     sqlcon.Close();
@@ -72,6 +73,7 @@ namespace InventoryManagementSystem
             txtphone.Clear();
             txtpass.Clear();
             txtconpass.Clear();
+            rolecombo.Text = "";
         }
 
         private void btnupd_Click(object sender, EventArgs e)
@@ -86,12 +88,13 @@ namespace InventoryManagementSystem
                 if (MessageBox.Show("Do You " +
                 "Want To Update This User", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    sqlcommand = new SqlCommand("UPDATE tbUser SET username=@username,fullname=@fullname,email=@email,phone=@phone,password=@password WHERE username LIKE '"+ txtUser.Text  + "'", sqlcon);
+                    sqlcommand = new SqlCommand("UPDATE tbUser SET username=@username,fullname=@fullname,email=@email,phone=@phone,password=@password, role=@role WHERE username LIKE '"+ txtUser.Text  + "'", sqlcon);
                     sqlcommand.Parameters.AddWithValue("@username", txtUser.Text);
                     sqlcommand.Parameters.AddWithValue("@fullname", txtfull.Text);
                     sqlcommand.Parameters.AddWithValue("@email", txtemail.Text);
                     sqlcommand.Parameters.AddWithValue("@phone", txtphone.Text);
                     sqlcommand.Parameters.AddWithValue("@password", txtpass.Text);
+                    sqlcommand.Parameters.AddWithValue("@role", rolecombo.Text);
                     sqlcon.Open();
                     sqlcommand.ExecuteNonQuery();
                     sqlcon.Close();

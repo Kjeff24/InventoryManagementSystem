@@ -12,12 +12,13 @@ namespace InventoryManagementSystem
 {
     public partial class MainPage : Form
     {
-        public MainPage()
+        public string setrole;
+        public MainPage(String setRole )
         {
-
+            setrole = setRole;
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-            // Displays product page in the childe form
+            // Displays product page in the child form
             openChildForm(new ProductPage());
             lbltitle.Text = "MANAGE PRODUCTS";
             pane1.BackColor = Color.Black;
@@ -25,7 +26,7 @@ namespace InventoryManagementSystem
             pane3.BackColor = Color.Cyan;
             pane4.BackColor = Color.Cyan;
             pane5.BackColor = Color.Cyan;
-
+            
         }   
 
         private void closebtn_Click(object sender, EventArgs e)
@@ -95,13 +96,20 @@ namespace InventoryManagementSystem
         // Display user page
         private void labusers_MouseClick(object sender, MouseEventArgs e)
         {
-            openChildForm(new UserPage());
-            lbltitle.Text = "MANAGE USERS";
-            pane1.BackColor = Color.Cyan;
-            pane2.BackColor = Color.Cyan;
-            pane3.BackColor = Color.Cyan;
-            pane4.BackColor = Color.Black;
-            pane5.BackColor = Color.Cyan;
+            if (setrole == "Attendant")
+            {
+                MessageBox.Show("You are unauthorized to access this page", "UNAUTHORIZED", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                openChildForm(new UserPage());
+                lbltitle.Text = "MANAGE USERS";
+                pane1.BackColor = Color.Cyan;
+                pane2.BackColor = Color.Cyan;
+                pane3.BackColor = Color.Cyan;
+                pane4.BackColor = Color.Black;
+                pane5.BackColor = Color.Cyan;
+            }
         }
 
         // Displays order page

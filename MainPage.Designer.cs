@@ -209,11 +209,11 @@
             this.labusers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labusers.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labusers.ForeColor = System.Drawing.Color.Black;
-            this.labusers.Location = new System.Drawing.Point(109, 418);
+            this.labusers.Location = new System.Drawing.Point(109, 419);
             this.labusers.Name = "labusers";
-            this.labusers.Size = new System.Drawing.Size(56, 16);
+            this.labusers.Size = new System.Drawing.Size(40, 16);
             this.labusers.TabIndex = 15;
-            this.labusers.Text = "Admins";
+            this.labusers.Text = "Users";
             this.labusers.MouseClick += new System.Windows.Forms.MouseEventHandler(this.labusers_MouseClick);
             // 
             // labcust
@@ -379,7 +379,6 @@
         private System.Windows.Forms.Panel pane1;
         private System.Windows.Forms.Label labprod;
         private System.Windows.Forms.Label laborders;
-        private System.Windows.Forms.Label labusers;
         private System.Windows.Forms.Label labcust;
         private System.Windows.Forms.Label labcats;
         private System.Windows.Forms.PictureBox btnprod;
@@ -394,5 +393,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbltitle;
         private System.Windows.Forms.Label logout;
+        public System.Windows.Forms.Label labusers;
     }
 }
