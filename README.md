@@ -11,7 +11,7 @@ https://www.loom.com/share/35c2f94ad55c405081c3c624445a0cd9
 NON FUNCTIONAL REQUIREMENTS
 =
 All users have permission to the pages, except attendants are restricted from user page.
-All users can login, add products, add customers, add categories, and add orders
+All users can login, add products, add customers, add categories, and add orders. Microsoft SQL Database was used as the backend
 
 FUNCTIONAL REQUIREMENTS
 =
