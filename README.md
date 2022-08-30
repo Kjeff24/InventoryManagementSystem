@@ -6,6 +6,7 @@ An Inventory Management System to manage users, customers, products, and orders
 
 VIDEO
 =
+https://youtu.be/2Xqsv1QLFGM
 https://www.loom.com/share/35c2f94ad55c405081c3c624445a0cd9
 
 NON FUNCTIONAL REQUIREMENTS
